@@ -10,7 +10,7 @@ if [[ $# -lt 1 ]]; then
     echo "Error! this script requires 1 or 2 arguments to run"
     sleep 2
     echo "Usage: $0 <arg 1> <arg 2> "
-    echo "Example: to-do.sh add "Milk" "
+    echo "Example: to-do.sh add Milk "
     exit 1
 fi 
 
