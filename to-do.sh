@@ -19,7 +19,7 @@ case $TO_DO in
         if grep -q "$Arg2" tasks.txt; then
             echo -e "\n${YELLOW} Task already exists!${RESET}\n"
         else
-            echo  " "$Arg2" $(date +%Y-%m-%d_%H:%M:%S)" >> tasks.txt
+            echo  " $Arg2 $(date +%Y-%m-%d_%H:%M:%S)" >> tasks.txt
             echo -e "\n${GREEN} Task created successfully! ${RESET}\n"
         fi
         ;;
