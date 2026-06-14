@@ -55,6 +55,7 @@ Install dependencies:
 npm install
 Run the project:
 npm start
+chmod +x to-do.sh
 
 🧠 Challenges faced
 

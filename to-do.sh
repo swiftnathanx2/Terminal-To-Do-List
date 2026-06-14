@@ -16,8 +16,14 @@ fi
 
 case $TO_DO in
     add)
+        if [ -z "$Arg2" ]; then 
+        echo -e "Usage : ./to-do.sh add \"<taskname>\""
+        exit 1
+        fi
+
         if grep -q "$Arg2" tasks.txt; then
             echo -e "\n${YELLOW} Task already exists!${RESET}\n"
+            
         else
             echo  " $Arg2 $(date +%Y-%m-%d_%H:%M:%S)" >> tasks.txt
             echo -e "\n${GREEN} Task created successfully! ${RESET}\n"
@@ -29,6 +35,11 @@ case $TO_DO in
         echo -e "\n====================================================${RESET}"
         ;;
     del)
+        if [ -z "$Arg2" ]; then
+            echo -e "Usage: ./to-do.sh del \"<line number>\""
+            exit 1
+        fi
+
         if [[ "$Arg2" > $(wc -l < tasks.txt) ]]; then
             echo "Line number $Arg2 not found!"
         else
